@@ -1,0 +1,42 @@
+const mealType = ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Teatime'];
+const dishType = [
+  'Alcohol-cocktail',
+  'Biscuits and cookies',
+  'Bread',
+  'Cereals',
+  'Condiments and Sauces',
+  'Drinks',
+  'Desserts',
+  'Egg',
+  'Main course',
+  'Omlet',
+  'Pancake',
+  'Preps',
+  'Preserve',
+  'Salad',
+  'Sandwiches',
+  'Soup',
+  'Starter',
+];
+const cuisineType = [
+  'American',
+  'Asian',
+  'British',
+  'Caribbean',
+  'Central Europe',
+  'Chinese',
+  'Eastern Europe',
+  'French',
+  'Indian',
+  'Italian',
+  'Japanese',
+  'Kosher',
+  'Mediterranean',
+  'Mexican',
+  'Middle Eastern',
+  'Nordic',
+  'South Amerian',
+  'South East Asian',
+];
+
+export { mealType, dishType, cuisineType };
