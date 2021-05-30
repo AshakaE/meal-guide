@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MealCard = () => (
   <div>
@@ -9,6 +10,7 @@ const MealCard = () => (
       <p>Name</p>
       <p>Mealtype</p>
     </div>
+    <Link to="/recipe">View recipe</Link>
   </div>
 );
 
