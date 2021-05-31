@@ -1,33 +1,42 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import axios from 'axios';
 import MealCard from './MealCard';
-import url from '../assets/url';
+import { getMeals } from '../actions/index';
+import Loading from './Loading';
 
 const MealList = (props) => {
-  const { meals } = props;
-  React.useEffect(() => {
-    axios.get(url('', '', '', '')).then((response) => {
-      console.log(response.data.hits);
+  const { getMeals, loading, meals } = props;
+  const values = [];
+  for (let i = 0; i < meals.length; i += 1) {
+    const {
+      label, image, ingredients, cuisineType, dishType, mealType, url,
+    } = meals[i].recipe;
+    const id = meals[i].recipe.uri.split('_')[1];
+    values.push({
+      id,
+      label,
+      image,
+      ingredients,
+      cuisineType,
+      dishType,
+      mealType,
+      url,
     });
-    return () => {};
-  });
+  }
+
+  React.useEffect(() => {
+    getMeals('rice', '&mealType=breakfast', '', '');
+  }, [getMeals]);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div>
       <div>
         <div>
-          {/* {meals.map((meal) => {
-            if (filter !== 'All') {
-              if (filter === meal.mealType) {
-                return <MealCard key={meal.id} meal={meal} />;
-              }
-            } else {
-              return <MealCard key={meal.id} meal={meal} />;
-            }
-            return null;
-          })} */}
-          {meals.map((meal) => (
+          {Object.values(values).map((meal) => (
             <MealCard key={meal.id} meal={meal} />
           ))}
         </div>
@@ -36,14 +45,12 @@ const MealList = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  meals: state.meals,
-  filter: state.filter,
-});
+const mapStateToProps = ({ mealState: { meals, loading } }) => ({ loading, meals });
 
 MealList.propTypes = {
+  loading: PropTypes.bool.isRequired,
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // filter: PropTypes.string.isRequired,
+  getMeals: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(MealList);
+export default connect(mapStateToProps, { getMeals })(MealList);
