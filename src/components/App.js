@@ -1,6 +1,7 @@
 import React from 'react';
-import MealCard from './MealCard';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MealRecipe from './MealRecipe';
+import MealList from './MealList';
 import { mealType, dishType, cuisineType } from '../assets/options';
 
 const App = () => (
@@ -29,8 +30,14 @@ const App = () => (
         ))}
       </select>
     </div>
-    <MealCard />
-    <MealRecipe />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={MealList} />
+        <Route path="/recipe" component={MealRecipe} />
+      </Switch>
+    </BrowserRouter>
+    {/* <MealList /> */}
+    {/* <MealRecipe /> */}
   </div>
 );
 
