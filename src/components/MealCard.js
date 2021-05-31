@@ -9,7 +9,6 @@ const MealCard = (props) => {
     },
   } = props;
 
-  console.log(id);
   return (
     <div>
       <div>

@@ -1,15 +1,18 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const MealRecipe = () => {
-  const one = 1;
-  console.log(one);
+  const { id } = useParams();
   return (
     <div>
       <div>
         <img src="" alt="" />
       </div>
       <div>
-        <p>Ingredients</p>
+        <p>
+          Ingredients
+          { id }
+        </p>
       </div>
     </div>
   );

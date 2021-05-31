@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import MealCard from './MealCard';
+import url from '../assets/url';
 
 const MealList = (props) => {
   const { meals } = props;
+  React.useEffect(() => {
+    axios.get(url('', '', '', '')).then((response) => {
+      console.log(response.data.hits);
+    });
+    return () => {};
+  });
   return (
     <div>
       <div>

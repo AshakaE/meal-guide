@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MealRecipe from './MealRecipe';
@@ -32,8 +33,10 @@ const App = () => (
     </div>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={MealList} />
-        <Route path="/recipe" component={MealRecipe} />
+        <Route exact path="/">
+          <MealList />
+        </Route>
+        <Route path="/recipe/:id" children={<MealRecipe />} />
       </Switch>
     </BrowserRouter>
     {/* <MealList /> */}
