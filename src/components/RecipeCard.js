@@ -1,31 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-const MealCard = (props) => {
+const RecipeCard = (props) => {
   const {
-    meal: {
+    recipe: {
       id, label, mealType, image,
     },
   } = props;
 
   return (
-    <div>
-      <p>{id}</p>
+
+    <>
       <div>
         <img src={image} alt={label} />
       </div>
       <div>
-        <p>{label}</p>
-        <p>{mealType}</p>
+        <p>
+          Ingredients
+          { id }
+          { mealType }
+        </p>
       </div>
-      <Link to={`/recipe/${id}`}>View recipe</Link>
-    </div>
+    </>
   );
 };
 
-MealCard.propTypes = {
-  meal: PropTypes.shape({
+RecipeCard.propTypes = {
+  recipe: PropTypes.shape({
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     mealType: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -33,4 +34,4 @@ MealCard.propTypes = {
   }).isRequired,
 };
 
-export default MealCard;
+export default RecipeCard;

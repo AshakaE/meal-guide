@@ -39,8 +39,6 @@ const App = () => (
         <Route path="/recipe/:id" children={<MealRecipe />} />
       </Switch>
     </BrowserRouter>
-    {/* <MealList /> */}
-    {/* <MealRecipe /> */}
   </div>
 );
 
