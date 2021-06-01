@@ -3,12 +3,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MealCard from './MealCard';
-import { getMeals } from '../actions/index';
+import { getMeals, getOptions } from '../actions/index';
 import Loading from './Loading';
 import vals from '../assets/values';
 
 const MealList = (props) => {
-  const { getMeals, loading, meals } = props;
+  const {
+    getMeals, loading, meals, options,
+  } = props;
+  // const options = getOptions();
+  console.log(options);
+
   const cas = vals(meals);
 
   React.useEffect(() => {
@@ -31,12 +36,16 @@ const MealList = (props) => {
   );
 };
 
-const mapStateToProps = ({ mealState: { meals, loading } }) => ({ loading, meals });
+const mapStateToProps = ({
+  mealState: { meals, loading },
+  filterState: { options },
+}) => ({ loading, meals, options });
 
 MealList.propTypes = {
   loading: PropTypes.bool.isRequired,
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
   getMeals: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default connect(mapStateToProps, { getMeals })(MealList);
+export default connect(mapStateToProps, { getMeals, getOptions })(MealList);

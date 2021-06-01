@@ -4,6 +4,7 @@ import { url, urlRecipe } from '../assets/url';
 export const GET_MEALS = 'GET_MEALS';
 export const GET_RECIPE = 'GET_RECIPE';
 export const SET_LOADING = 'SET_LOADING';
+export const FILTER = 'FILTER';
 
 export const setLoading = () => ({ type: SET_LOADING });
 
@@ -23,3 +24,8 @@ export const getRecipe = (d1) => async function fn(dispatch) {
   const values = data.hits;
   dispatch({ type: GET_RECIPE, payload: values });
 };
+
+export const getOptions = (options) => ({
+  type: FILTER,
+  payload: options,
+});

@@ -6,12 +6,17 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import mealReducer from './reducers/meal';
 import recipeReducer from './reducers/recipe';
+import filterReducer from './reducers/filter';
 import './index.css';
 import App from './components/App';
 
 const middleware = [thunk];
 const store = createStore(
-  combineReducers({ mealState: mealReducer, recipeState: recipeReducer }),
+  combineReducers({
+    mealState: mealReducer,
+    recipeState: recipeReducer,
+    filterState: filterReducer,
+  }),
   composeWithDevTools(applyMiddleware(...middleware)),
 );
 

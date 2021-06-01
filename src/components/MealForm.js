@@ -1,7 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { mealType, dishType, cuisineType } from '../assets/options';
+import { getOptions } from '../actions/index';
 
-const MealForm = () => {
+const MealForm = (props) => {
+  const { getOptions } = props;
   const [state, setState] = React.useState({
     findMeal: '',
     mealCategory: '',
@@ -14,6 +18,8 @@ const MealForm = () => {
       ...state,
       [e.target.name]: values,
     });
+    // console.log(state);
+    getOptions(state);
     // console.log({ values });
   };
   const handleSubmit = () => {
@@ -29,7 +35,8 @@ const MealForm = () => {
     if (filter.cuisineCategory === '') {
       filter.cuisineCategory = 'american';
     }
-    console.log(filter);
+    // console.log(state);
+    // getOptions(filter);
     return filter;
   };
 
@@ -70,4 +77,16 @@ const MealForm = () => {
   );
 };
 
-export default MealForm;
+const mapStateToProps = ({ filterState: { options } }) => ({
+  options,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getOptions: (options) => dispatch(getOptions(options)),
+});
+
+MealForm.propTypes = {
+  getOptions: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MealForm);
