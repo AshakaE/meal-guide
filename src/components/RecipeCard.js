@@ -4,37 +4,40 @@ import PropTypes from 'prop-types';
 const RecipeCard = (props) => {
   const {
     recipe: {
-      id, label, mealType, ingredients, image,
+      label, mealType, ingredients, image, url,
     },
   } = props;
 
   return (
-
     <>
       <div>
         <img src={image} alt={label} />
       </div>
       <div>
         <p>
-          Ingredients
-          { id }
-          { mealType }
+          {mealType}
         </p>
         <div>
-          {ingredients.map((item) => (<p key={item}>{item}</p>))}
+          Ingredients
+          {ingredients.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
         </div>
       </div>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        View meal procedures
+      </a>
     </>
   );
 };
 
 RecipeCard.propTypes = {
   recipe: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     mealType: PropTypes.arrayOf(PropTypes.string).isRequired,
     ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
     image: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
 

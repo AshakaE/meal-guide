@@ -12,7 +12,7 @@ const MealList = (props) => {
   const cas = vals(meals);
 
   React.useEffect(() => {
-    getMeals('chicken', '&mealType=breakfast', '', '');
+    getMeals('fish', '&mealType=breakfast', '', '');
   }, [getMeals]);
   if (loading) {
     return <Loading />;
