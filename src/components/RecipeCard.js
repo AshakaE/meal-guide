@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const RecipeCard = (props) => {
   const {
     recipe: {
-      id, label, mealType, image,
+      id, label, mealType, ingredients, image,
     },
   } = props;
 
@@ -20,6 +20,9 @@ const RecipeCard = (props) => {
           { id }
           { mealType }
         </p>
+        <div>
+          {ingredients.map((item) => (<p key={item}>{item}</p>))}
+        </div>
       </div>
     </>
   );
@@ -30,6 +33,7 @@ RecipeCard.propTypes = {
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     mealType: PropTypes.arrayOf(PropTypes.string).isRequired,
+    ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
     image: PropTypes.string.isRequired,
   }).isRequired,
 };

@@ -11,7 +11,7 @@ const MealRecipe = (props) => {
   const { getRecipe, loading, recipe } = props;
   const { id } = useParams();
   const cas = vals(recipe);
-
+  console.log(cas[0]);
   React.useEffect(() => {
     getRecipe(`${id}`);
   }, [getRecipe]);
