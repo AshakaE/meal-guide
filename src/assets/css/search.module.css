@@ -1,5 +1,5 @@
 .house {
-  @apply m-auto max-w-full;
+  @apply m-auto max-w-full sticky top-0;
 }
 
 .container {
@@ -7,7 +7,7 @@
 }
 
 .form {
-  @apply flex flex-col bg-red-400 items-center pb-3;
+  @apply flex flex-col bg-gray-200 items-center pb-3 border-b border-gray-300 shadow-xl;
 }
 
 .search {

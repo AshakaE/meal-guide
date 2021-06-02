@@ -5,6 +5,7 @@ import MealCard from './MealCard';
 import { getMeals } from '../actions/index';
 import Loading from './Loading';
 import vals from '../assets/values';
+import styles from '../assets/css/results.module.css';
 
 const MealList = (props) => {
   const {
@@ -30,7 +31,7 @@ const MealList = (props) => {
   return (
     <div>
       <div>
-        <div>
+        <div className={styles.listGrid}>
           {Object.values(cas).map((meal) => (
             <MealCard key={meal.id} meal={meal} />
           ))}

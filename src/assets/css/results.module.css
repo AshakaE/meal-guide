@@ -1,0 +1,43 @@
+.listGrid {
+  @apply grid grid-cols-4 gap-4 m-auto px-5 pt-5;
+}
+
+.card {
+  @apply flex flex-col w-auto items-center h-[465px] border border-blue-300 rounded-lg overflow-hidden;
+}
+
+.cardInfo {
+  @apply flex flex-col items-start min-w-full;
+}
+
+.mealInfo {
+  @apply flex justify-start w-full items-center;
+}
+
+.mealInfoOne {
+  @apply flex flex-col justify-start w-3/12 bg-blue-200 border-t border-blue-300;
+}
+
+.mealInfoTwo {
+  @apply flex flex-col justify-start w-3/4 items-center border-t border-blue-300 bg-gray-100;
+}
+
+.mealDetails {
+  @apply flex flex-col justify-center px-1 w-3/4 text-base italic h-[50px] bg-gray-100 text-gray-500 text-center align-middle border-t border-blue-300;
+}
+
+.image {
+  @apply object-cover w-[480px];
+}
+
+.label {
+  @apply flex flex-col w-3/12 h-[50px] justify-center text-lg italic bg-blue-200 pl-1 text-blue-500 border-r border-t border-blue-300;
+}
+
+.mealTitle {
+  @apply flex flex-col h-[33px] justify-center text-lg italic bg-blue-200 pl-1 text-blue-500 border-b border-r border-blue-300;
+}
+
+.labelInfo {
+  @apply flex flex-col justify-center px-1 w-full text-base italic min-h-[33px] bg-gray-100 text-gray-500 text-center align-middle m-0 border-b border-blue-300;
+}
