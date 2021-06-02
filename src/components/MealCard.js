@@ -38,18 +38,18 @@ const MealCard = (props) => {
           </div>
           <div className={styles.mealInfoTwo}>
             <div className={styles.labelInfo}>
-              <p>{mealType}</p>
+              <p>{mealType ?? 'nil'}</p>
             </div>
             <div className={styles.labelInfo}>
-              <p>{dishType}</p>
+              <p>{dishType ?? 'nil'}</p>
             </div>
             <div className={styles.labelInfo}>
-              <p>{cuisineType}</p>
+              <p>{cuisineType ?? 'nil'}</p>
             </div>
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.btn}>
         <Link to={`/recipe/${id}`}>View recipe</Link>
       </div>
     </div>

@@ -1,0 +1,63 @@
+.container {
+  @apply flex flex-col items-center w-full bg-gray-100 h-[90vh];
+}
+
+.header {
+  @apply bg-blue-100 text-center text-4xl pt-20 pb-10 italic font-bold w-full mb-7 shadow-xl text-blue-900 border-blue-300 border-b;
+}
+
+.label {
+  @apply w-full;
+}
+
+.info {
+  @apply flex justify-between w-full pl-72 pr-72;
+}
+
+.recipeInfo {
+  @apply w-3/6;
+}
+
+.image {
+  @apply object-cover w-80 border-blue-300 border rounded-lg overflow-hidden;
+}
+
+.links {
+  @apply mt-2;
+}
+
+.link {
+  @apply text-base font-medium text-center py-1 text-blue-900 hover:text-blue-500;
+}
+
+.mealInfo {
+  @apply flex w-full justify-between flex-col;
+}
+
+.mealInfoOne {
+  @apply flex justify-around mb-2 border-b border-gray-600 pb-1;
+}
+
+.mealInfoTwo {
+  @apply flex justify-around mt-1 border-b border-gray-600;
+}
+
+.mealTitle {
+  @apply flex w-2/6 justify-center italic font-medium;
+}
+
+.labelInfo {
+  @apply flex w-2/6 justify-center italic;
+}
+
+.title {
+  @apply flex w-3/6 border-b border-gray-600 text-2xl italic font-medium justify-center m-auto mb-3;
+}
+
+.list {
+  @apply text-center w-full mt-10;
+}
+
+.item {
+  @apply py-1;
+}

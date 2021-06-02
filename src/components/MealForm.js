@@ -43,6 +43,9 @@ const MealForm = (props) => {
   return (
     <div className={styles.house}>
       <div className={styles.container}>
+        <div className={styles.header}>
+          <h1>The Meal Guide</h1>
+        </div>
         <div className={styles.form}>
           <div className={styles.search}>
             <input
@@ -50,6 +53,7 @@ const MealForm = (props) => {
               name="findMeal"
               onChange={handleChange}
               className={styles.searchBox}
+              placeholder="Search meal"
             />
           </div>
           <div className={styles.input}>
@@ -91,7 +95,7 @@ const MealForm = (props) => {
             </select>
           </div>
           <button type="submit" id="btn" onClick={handleSubmit} className={styles.btn}>
-            Search Meal
+            Search
           </button>
         </div>
       </div>

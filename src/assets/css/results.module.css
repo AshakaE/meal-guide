@@ -1,9 +1,13 @@
 .listGrid {
-  @apply grid grid-cols-4 gap-4 m-auto px-5 pt-5;
+  @apply grid grid-cols-4 gap-4 m-auto xl:px-96 pt-5 pb-24;
+}
+
+.header {
+  @apply col-span-4;
 }
 
 .card {
-  @apply flex flex-col w-auto items-center h-[465px] border border-blue-300 rounded-lg overflow-hidden;
+  @apply flex flex-col w-auto items-center max-h-[465px] border border-blue-300 rounded-lg overflow-hidden;
 }
 
 .cardInfo {
@@ -40,4 +44,8 @@
 
 .labelInfo {
   @apply flex flex-col justify-center px-1 w-full text-base italic min-h-[33px] bg-gray-100 text-gray-500 text-center align-middle m-0 border-b border-blue-300;
+}
+
+.btn {
+  @apply flex text-lg items-center flex-col pt-1 pb-1 text-blue-800 bg-gray-200 w-full h-full hover:bg-gray-300 hover:text-blue-600;
 }
