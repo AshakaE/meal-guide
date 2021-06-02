@@ -1,4 +1,3 @@
-/* eslint-disable no-sequences */
 import { url, urlRecipe } from '../assets/url';
 
 export const GET_MEALS = 'GET_MEALS';
@@ -20,7 +19,6 @@ export const getRecipe = (d1) => async function fn(dispatch) {
   dispatch(setLoading());
   const response = await fetch(urlRecipe(d1));
   const data = await response.json();
-  // console.log(data.hits);
   const values = data.hits;
   dispatch({ type: GET_RECIPE, payload: values });
 };

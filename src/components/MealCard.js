@@ -11,12 +11,11 @@ const MealCard = (props) => {
 
   return (
     <div>
-      <p>{id}</p>
+      <p>{label}</p>
       <div>
         <img src={image} alt={label} />
       </div>
       <div>
-        <p>{label}</p>
         <p>{mealType}</p>
       </div>
       <Link to={`/recipe/${id}`}>View recipe</Link>

@@ -7,10 +7,10 @@ import MealForm from './MealForm';
 
 const App = () => (
   <>
-    <MealForm />
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <MealForm />
           <MealList />
         </Route>
         <Route path="/recipe/:id" children={<MealRecipe />} />

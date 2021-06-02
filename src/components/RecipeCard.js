@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
   const {
@@ -27,6 +28,7 @@ const RecipeCard = (props) => {
       <a href={url} target="_blank" rel="noopener noreferrer">
         View meal procedures
       </a>
+      <Link to="/">Go to Search</Link>
     </>
   );
 };
