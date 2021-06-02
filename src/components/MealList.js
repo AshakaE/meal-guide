@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MealCard from './MealCard';
-import { getMeals, getOptions } from '../actions/index';
+import { getMeals } from '../actions/index';
 import Loading from './Loading';
 import vals from '../assets/values';
 
@@ -11,14 +11,19 @@ const MealList = (props) => {
   const {
     getMeals, loading, meals, options,
   } = props;
-  // const options = getOptions();
-  console.log(options);
 
   const cas = vals(meals);
 
-  React.useEffect(() => {
-    getMeals('fish', '&mealType=breakfast', '', '');
-  }, [getMeals]);
+  useEffect(() => {
+    const {
+      findMeal,
+      mealCategory,
+      dishCategory,
+      cuisineCategory,
+    } = options;
+    getMeals(findMeal, mealCategory, dishCategory, cuisineCategory);
+  }, [options]);
+
   if (loading) {
     return <Loading />;
   }
@@ -48,4 +53,4 @@ MealList.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default connect(mapStateToProps, { getMeals, getOptions })(MealList);
+export default connect(mapStateToProps, { getMeals })(MealList);

@@ -18,10 +18,8 @@ const MealForm = (props) => {
       ...state,
       [e.target.name]: values,
     });
-    // console.log(state);
-    getOptions(state);
-    // console.log({ values });
   };
+
   const handleSubmit = () => {
     const filter = {
       ...state,
@@ -35,9 +33,7 @@ const MealForm = (props) => {
     if (filter.cuisineCategory === '') {
       filter.cuisineCategory = 'american';
     }
-    // console.log(state);
-    // getOptions(filter);
-    return filter;
+    getOptions(filter);
   };
 
   return (
@@ -70,7 +66,7 @@ const MealForm = (props) => {
           ))}
         </select>
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <button type="submit" id="btn" onClick={handleSubmit}>
         Search Meal
       </button>
     </div>
@@ -81,12 +77,8 @@ const mapStateToProps = ({ filterState: { options } }) => ({
   options,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  getOptions: (options) => dispatch(getOptions(options)),
-});
-
 MealForm.propTypes = {
   getOptions: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MealForm);
+export default connect(mapStateToProps, { getOptions })(MealForm);

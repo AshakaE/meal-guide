@@ -3,7 +3,7 @@ import { FILTER } from '../actions/index';
 const defaultState = {
   options: {
     findMeal: '',
-    dishCatergory: '',
+    dishCategory: '',
     mealCategory: '',
     cuisineCategory: '',
   },
@@ -11,8 +11,7 @@ const defaultState = {
 
 const filterReducer = (state = defaultState, action) => {
   if (action.type === FILTER) {
-    console.log('hello');
-    return action.payload;
+    return { options: action.payload };
   }
   return state;
 };

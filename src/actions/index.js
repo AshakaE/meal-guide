@@ -25,7 +25,6 @@ export const getRecipe = (d1) => async function fn(dispatch) {
   dispatch({ type: GET_RECIPE, payload: values });
 };
 
-export const getOptions = (options) => ({
-  type: FILTER,
-  payload: options,
-});
+export const getOptions = (options) => async function fn(dispatch) {
+  dispatch({ type: FILTER, payload: options });
+};
