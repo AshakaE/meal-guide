@@ -50,7 +50,7 @@ MealList.propTypes = {
   loading: PropTypes.bool.isRequired,
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
   getMeals: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(PropTypes.array).isRequired,
+  options: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default connect(mapStateToProps, { getMeals })(MealList);
