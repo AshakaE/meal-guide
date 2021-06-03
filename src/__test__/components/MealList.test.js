@@ -3,11 +3,10 @@ import renderer from 'react-test-renderer';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import ReactRouter from 'react-router';
-import mealReducer from '../reducers/meal';
-import recipeReducer from '../reducers/recipe';
-import filterReducer from '../reducers/filter';
-import MealRecipe from '../components/MealRecipe';
+import mealReducer from '../../reducers/meal';
+import recipeReducer from '../../reducers/recipe';
+import filterReducer from '../../reducers/filter';
+import MealList from '../../components/MealList';
 
 const middleware = [thunk];
 const store = createStore(
@@ -19,14 +18,13 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware)),
 );
 
-describe('MealRecipe', () => {
+describe('MealList', () => {
   it('renders correctly', () => {
-    jest.spyOn(ReactRouter, 'useParams').mockReturnValue({ id: '1234' });
     const tree = renderer
       .create(
-        <MealRecipe
+        <MealList
           store={store}
-          id="1234"
+          id="1"
           title="Test meal"
           image="url"
           cuisine="cuisine"

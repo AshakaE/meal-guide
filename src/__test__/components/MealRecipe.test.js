@@ -3,10 +3,11 @@ import renderer from 'react-test-renderer';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import mealReducer from '../reducers/meal';
-import recipeReducer from '../reducers/recipe';
-import filterReducer from '../reducers/filter';
-import MealForm from '../components/MealForm';
+import ReactRouter from 'react-router';
+import mealReducer from '../../reducers/meal';
+import recipeReducer from '../../reducers/recipe';
+import filterReducer from '../../reducers/filter';
+import MealRecipe from '../../components/MealRecipe';
 
 const middleware = [thunk];
 const store = createStore(
@@ -18,19 +19,20 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware)),
 );
 
-describe('MealForm', () => {
+describe('MealRecipe', () => {
   it('renders correctly', () => {
+    jest.spyOn(ReactRouter, 'useParams').mockReturnValue({ id: '1234' });
     const tree = renderer
       .create(
-        <MealForm
+        <MealRecipe
           store={store}
-          filters={{
-            q: '',
-            cuisineType: '',
-            dishType: '',
-            mealType: '',
-          }}
-          handleSubmit={() => {}}
+          id="1234"
+          title="Test meal"
+          image="url"
+          cuisine="cuisine"
+          dish={['dish']}
+          meal={['meal']}
+          key="1"
         />,
       )
       .toJSON();

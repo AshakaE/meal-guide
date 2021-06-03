@@ -11,7 +11,7 @@ const MealList = (props) => {
   const {
     getMeals, loading, meals, options,
   } = props;
-
+  console.log(options);
   const cas = vals(meals);
 
   useEffect(() => {

@@ -5,12 +5,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import MealRecipe from '../components/MealRecipe';
-import MealList from '../components/MealList';
-import MealForm from '../components/MealForm';
-import mealReducer from '../reducers/meal';
-import recipeReducer from '../reducers/recipe';
-import filterReducer from '../reducers/filter';
+import MealRecipe from '../../components/MealRecipe';
+import MealList from '../../components/MealList';
+import MealForm from '../../components/MealForm';
+import mealReducer from '../../reducers/meal';
+import recipeReducer from '../../reducers/recipe';
+import filterReducer from '../../reducers/filter';
 
 const middleware = [thunk];
 

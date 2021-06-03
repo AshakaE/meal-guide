@@ -3,10 +3,10 @@ import renderer from 'react-test-renderer';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import mealReducer from '../reducers/meal';
-import recipeReducer from '../reducers/recipe';
-import filterReducer from '../reducers/filter';
-import MealList from '../components/MealList';
+import mealReducer from '../../reducers/meal';
+import recipeReducer from '../../reducers/recipe';
+import filterReducer from '../../reducers/filter';
+import MealForm from '../../components/MealForm';
 
 const middleware = [thunk];
 const store = createStore(
@@ -18,19 +18,19 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware)),
 );
 
-describe('MealList', () => {
+describe('MealForm', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(
-        <MealList
+        <MealForm
           store={store}
-          id="1"
-          title="Test meal"
-          image="url"
-          cuisine="cuisine"
-          dish={['dish']}
-          meal={['meal']}
-          key="1"
+          filters={{
+            q: '',
+            cuisineType: '',
+            dishType: '',
+            mealType: '',
+          }}
+          handleSubmit={() => {}}
         />,
       )
       .toJSON();

@@ -11,7 +11,7 @@ exports[`RecipeCard renders correctly 1`] = `
       className="header"
     >
       <h1>
-        nil
+        meal
          recipe
       </h1>
     </div>
@@ -22,9 +22,9 @@ exports[`RecipeCard renders correctly 1`] = `
     <div>
       <div>
         <img
-          alt="nil"
+          alt="meal"
           className="image"
-          src="nil"
+          src="url"
         />
       </div>
       <div
@@ -34,6 +34,7 @@ exports[`RecipeCard renders correctly 1`] = `
           className="link"
         >
           <a
+            href="blank"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -90,21 +91,21 @@ exports[`RecipeCard renders correctly 1`] = `
             className="labelInfo"
           >
             <p>
-              nil
+              lunch
             </p>
           </div>
           <div
             className="labelInfo"
           >
             <p>
-              nil
+              egg
             </p>
           </div>
           <div
             className="labelInfo"
           >
             <p>
-              nil
+              test
             </p>
           </div>
         </div>
