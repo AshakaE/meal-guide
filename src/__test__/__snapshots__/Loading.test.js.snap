@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading renders correctly 1`] = `
+<div
+  className="loading"
+>
+  <img
+    alt="loading"
+    src="https://media.giphy.com/media/3y0oCOkdKKRi0/giphy.gif"
+  />
+</div>
+`;
