@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MealCard renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div>
+    <img
+      alt="image"
+      className="image"
+    />
+  </div>
+  <div
+    className="cardInfo"
+  >
+    <div
+      className="mealInfo"
+    >
+      <div
+        className="label"
+      >
+        <p>
+          Title
+        </p>
+      </div>
+      <div
+        className="mealDetails"
+      >
+        <p />
+      </div>
+    </div>
+    <div
+      className="mealInfo"
+    >
+      <div
+        className="mealInfoOne"
+      >
+        <div
+          className="mealTitle"
+        >
+          <p>
+            Meal
+          </p>
+        </div>
+        <div
+          className="mealTitle"
+        >
+          <p>
+            Dish
+          </p>
+        </div>
+        <div
+          className="mealTitle"
+        >
+          <p>
+            Cuisine
+          </p>
+        </div>
+      </div>
+      <div
+        className="mealInfoTwo"
+      >
+        <div
+          className="labelInfo"
+        >
+          <p>
+            nil
+          </p>
+        </div>
+        <div
+          className="labelInfo"
+        >
+          <p>
+            nil
+          </p>
+        </div>
+        <div
+          className="labelInfo"
+        >
+          <p>
+            nil
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="btn"
+  >
+    <a
+      href="/recipe/undefined"
+      onClick={[Function]}
+    >
+      View recipe
+    </a>
+  </div>
+</div>
+`;

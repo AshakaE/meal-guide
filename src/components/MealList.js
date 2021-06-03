@@ -13,7 +13,7 @@ const MealList = (props) => {
   } = props;
 
   const cas = vals(meals);
-
+  console.log(cas);
   useEffect(() => {
     const {
       findMeal,
@@ -50,7 +50,7 @@ MealList.propTypes = {
   loading: PropTypes.bool.isRequired,
   meals: PropTypes.arrayOf(PropTypes.object).isRequired,
   getMeals: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  options: PropTypes.arrayOf(PropTypes.array).isRequired,
 };
 
 export default connect(mapStateToProps, { getMeals })(MealList);
