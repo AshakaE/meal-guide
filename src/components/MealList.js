@@ -13,7 +13,7 @@ const MealList = (props) => {
   } = props;
 
   const cas = vals(meals);
-  console.log(cas);
+
   useEffect(() => {
     const {
       findMeal,

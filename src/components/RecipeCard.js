@@ -16,7 +16,7 @@ const RecipeCard = (props) => {
         <div className={styles.label}>
           <div className={styles.header}>
             <h1>
-              {label}
+              {label ?? 'nil'}
               &nbsp;recipe
             </h1>
           </div>
@@ -24,7 +24,7 @@ const RecipeCard = (props) => {
         <div className={styles.info}>
           <div>
             <div>
-              <img src={image} alt={label} className={styles.image} />
+              <img src={image ?? 'nil'} alt={label ?? 'nil'} className={styles.image} />
             </div>
             <div className={styles.links}>
               <div className={styles.link}>

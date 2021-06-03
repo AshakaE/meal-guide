@@ -1,21 +1,16 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import MealCard from '../components/MealCard';
+import RecipeCard from '../components/RecipeCard';
 
-describe('MealCard', () => {
+describe('RecipeCard', () => {
   it('renders correctly', () => {
+    const ingredients = ['1', '2', '3'];
     const tree = renderer
       .create(
         <BrowserRouter>
-          <MealCard
-            id="1"
-            title="meal"
-            image="url"
-            cuisine={['italian']}
-            dish={['dish']}
-            meal={['meal']}
-            key="1"
+          <RecipeCard
+            recipe={{ ingredients }}
           />
         </BrowserRouter>,
       )
