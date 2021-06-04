@@ -19,11 +19,11 @@
 }
 
 .input {
-  @apply flex w-3/6 justify-between;
+  @apply flex flex-col lg:flex-row w-full lg:w-3/6 items-center md:justify-between;
 }
 
 .singleInput {
-  @apply w-[30%] py-1 pl-3 border border-gray-200 rounded-md;
+  @apply w-[50%] lg:w-[30%] py-2 pl-3 border border-gray-200 rounded-md;
 }
 
 .btn {

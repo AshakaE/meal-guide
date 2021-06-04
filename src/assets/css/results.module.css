@@ -1,5 +1,5 @@
 .listGrid {
-  @apply grid grid-cols-4 gap-4 m-auto xl:px-96 pt-5 pb-24;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 m-auto px-14 md:px-20 lg:px-20 xl:px-40 2xl:px-80 pt-5 pb-24;
 }
 
 .header {
@@ -7,7 +7,7 @@
 }
 
 .card {
-  @apply flex flex-col w-auto items-center max-h-[465px] border border-blue-300 rounded-lg overflow-hidden;
+  @apply flex flex-col w-auto items-center max-h-[500px] border border-blue-300 rounded-lg overflow-hidden;
 }
 
 .cardInfo {
@@ -31,7 +31,7 @@
 }
 
 .image {
-  @apply object-cover w-[480px];
+  @apply object-cover lg:w-[250px] xl:w-[480px];
 }
 
 .label {
