@@ -58,12 +58,12 @@ const MealCard = (props) => {
 
 MealCard.propTypes = {
   meal: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    mealType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    dishType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    cuisineType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    image: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    label: PropTypes.string,
+    mealType: PropTypes.arrayOf(PropTypes.string),
+    dishType: PropTypes.arrayOf(PropTypes.string),
+    cuisineType: PropTypes.arrayOf(PropTypes.string),
+    image: PropTypes.string,
   }).isRequired,
 };
 

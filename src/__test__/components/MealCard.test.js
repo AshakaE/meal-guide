@@ -5,17 +5,24 @@ import MealCard from '../../components/MealCard';
 
 describe('MealCard', () => {
   it('renders correctly', () => {
+    const label = 'meal';
+    const mealType = ['lunch'];
+    const dishType = ['egg'];
+    const cuisineType = ['test'];
+    const image = 'url';
+    const id = 'blank';
     const tree = renderer
       .create(
         <BrowserRouter>
           <MealCard
-            id="1"
-            title="meal"
-            image="url"
-            cuisine={['italian']}
-            dish={['dish']}
-            meal={['meal']}
-            key="1"
+            meal={{
+              id,
+              label,
+              mealType,
+              dishType,
+              cuisineType,
+              image,
+            }}
           />
         </BrowserRouter>,
       )

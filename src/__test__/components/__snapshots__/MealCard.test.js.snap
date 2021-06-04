@@ -6,8 +6,9 @@ exports[`MealCard renders correctly 1`] = `
 >
   <div>
     <img
-      alt="image"
+      alt="meal"
       className="image"
+      src="url"
     />
   </div>
   <div
@@ -26,7 +27,9 @@ exports[`MealCard renders correctly 1`] = `
       <div
         className="mealDetails"
       >
-        <p />
+        <p>
+          meal
+        </p>
       </div>
     </div>
     <div
@@ -64,21 +67,21 @@ exports[`MealCard renders correctly 1`] = `
           className="labelInfo"
         >
           <p>
-            nil
+            lunch
           </p>
         </div>
         <div
           className="labelInfo"
         >
           <p>
-            nil
+            egg
           </p>
         </div>
         <div
           className="labelInfo"
         >
           <p>
-            nil
+            test
           </p>
         </div>
       </div>
@@ -88,7 +91,7 @@ exports[`MealCard renders correctly 1`] = `
     className="btn"
   >
     <a
-      href="/recipe/undefined"
+      href="/recipe/blank"
       onClick={[Function]}
     >
       View recipe

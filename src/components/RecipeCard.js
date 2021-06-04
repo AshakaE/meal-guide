@@ -79,13 +79,13 @@ const RecipeCard = (props) => {
 
 RecipeCard.propTypes = {
   recipe: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    mealType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    dishType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    cuisineType: PropTypes.arrayOf(PropTypes.string).isRequired,
-    ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-    image: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    mealType: PropTypes.arrayOf(PropTypes.string),
+    dishType: PropTypes.arrayOf(PropTypes.string),
+    cuisineType: PropTypes.arrayOf(PropTypes.string),
+    ingredients: PropTypes.arrayOf(PropTypes.string),
+    image: PropTypes.string,
+    url: PropTypes.string,
   }).isRequired,
 };
 
