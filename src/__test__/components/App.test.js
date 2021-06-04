@@ -1,13 +1,12 @@
-/* eslint-disable react/no-children-prop */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import MealRecipe from '../../components/MealRecipe';
-import MealList from '../../components/MealList';
-import MealForm from '../../components/MealForm';
+import MealRecipe from '../../containers/MealRecipe';
+import MealList from '../../containers/MealList';
+import MealForm from '../../containers/MealForm';
 import mealReducer from '../../reducers/meal';
 import recipeReducer from '../../reducers/recipe';
 import filterReducer from '../../reducers/filter';
@@ -34,7 +33,9 @@ describe('App', () => {
                 <MealForm store={store} />
                 <MealList store={store} />
               </Route>
-              <Route path="/recipe/:id" children={<MealRecipe />} />
+              <Route path="/recipe/:id">
+                <MealRecipe />
+              </Route>
             </Switch>
           </BrowserRouter>
         </>,

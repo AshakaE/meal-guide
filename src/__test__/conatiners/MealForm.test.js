@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import mealReducer from '../../reducers/meal';
 import recipeReducer from '../../reducers/recipe';
 import filterReducer from '../../reducers/filter';
-import MealForm from '../../components/MealForm';
+import MealForm from '../../containers/MealForm';
 
 const middleware = [thunk];
 const store = createStore(

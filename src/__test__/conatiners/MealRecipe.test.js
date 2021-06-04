@@ -7,7 +7,7 @@ import ReactRouter from 'react-router';
 import mealReducer from '../../reducers/meal';
 import recipeReducer from '../../reducers/recipe';
 import filterReducer from '../../reducers/filter';
-import MealRecipe from '../../components/MealRecipe';
+import MealRecipe from '../../containers/MealRecipe';
 
 const middleware = [thunk];
 const store = createStore(
