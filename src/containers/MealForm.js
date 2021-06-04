@@ -34,9 +34,6 @@ const MealForm = (props) => {
     if (filter.cuisineCategory === '') {
       filter.cuisineCategory = 'american';
     }
-    if (filter.findMeal === '') {
-      filter.findMeal = 'bread';
-    }
     getOptions(filter);
   };
 
