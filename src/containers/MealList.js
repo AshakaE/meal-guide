@@ -48,9 +48,13 @@ const mapStateToProps = ({
 
 MealList.propTypes = {
   loading: PropTypes.bool.isRequired,
-  meals: PropTypes.arrayOf(PropTypes.object).isRequired,
+  meals: PropTypes.arrayOf(PropTypes.object),
   getMeals: PropTypes.func.isRequired,
   options: PropTypes.objectOf(PropTypes.string).isRequired,
+};
+
+MealList.defaultProps = {
+  meals: [],
 };
 
 export default connect(mapStateToProps, { getMeals })(MealList);
