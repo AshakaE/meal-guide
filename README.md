@@ -12,8 +12,8 @@ A Catalogue of recipes, with a browsable list of items that you can filter and a
 
 ## Built With
 
-- React.js
 - Redux
+- React.js
 - TailwindCSS
 
 ## Live Demo
