@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MealList renders correctly 1`] = `
+<div>
+  <div>
+    <div
+      className="listGrid"
+    />
+  </div>
+</div>
+`;

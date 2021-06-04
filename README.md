@@ -1,24 +1,29 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # React 
-
+A Catalogue of recipes, with a browsable list of items that you can filter and access to the details of one item. This is a React capstone project for my Microverse react curriculum.
 > 
-
-![](./docs/snapshot.jpeg)
+<p align="center">
+  
+  <img src="./src/assets/img/shot1.png" >
+  <img src="./src/assets/img/shot2.png" >
+  
+</p>
 
 ## Built With
 
 - React.js
+- Redux
 - TailwindCSS
 
 ## Live Demo
 
-[React]()
+[The Meal Guide](http://meal-guide.herokuapp.com/)
 
 ## Getting Started
 
-- `git clone git@github.com:AshakaE/`
-- `cd `
+- `git clone git@github.com:AshakaE/meal-guide.git`
+- `cd meal-guide`
 - `npm install`
 - `npm start`
 
@@ -41,7 +46,7 @@ Node.js
 
 Contributions, issues and, feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AshakaE//issues).
+Feel free to check the [issues page](https://github.com/AshakaE/meal-guide/issues).
 
 ## Show your support
 
@@ -50,6 +55,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
+- [EDAMAM RECIPE API](https://developer.edamam.com/edamam-docs-recipe-api)
 
 ## 📝 License
 
