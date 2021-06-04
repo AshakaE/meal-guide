@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getRecipe } from '../actions/index';
-import Loading from './Loading';
-import RecipeCard from './RecipeCard';
+import Loading from '../components/Loading';
+import RecipeCard from '../components/RecipeCard';
 import vals from '../assets/values';
 
 const MealRecipe = (props) => {

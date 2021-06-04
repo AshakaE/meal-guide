@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import MealCard from './MealCard';
+import MealCard from '../components/MealCard';
 import { getMeals } from '../actions/index';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 import vals from '../assets/values';
 import styles from '../assets/css/results.module.css';
 
@@ -11,7 +11,7 @@ const MealList = (props) => {
   const {
     getMeals, loading, meals, options,
   } = props;
-  console.log(options);
+
   const cas = vals(meals);
 
   useEffect(() => {
