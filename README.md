@@ -18,7 +18,7 @@ A Catalogue of recipes, with a browsable list of items that you can filter and a
 
 ## Live Demo
 
-[The Meal Guide](http://meal-guide.herokuapp.com/)
+[The Meal Guide](https://meal-guide.herokuapp.com/)
 
 ## Getting Started
 
