@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # React 
-A Catalogue of recipes, with a browsable list of items that you can filter and access to the details of one item. This is a React capstone project for my Microverse react curriculum.
+A catalogue of recipes, with a browsable list of items that you can filter and access to the details of one item. This is a React capstone project for my Microverse react curriculum.
 > 
 <p align="center">
   
